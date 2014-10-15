@@ -2,6 +2,9 @@
 bin/
 bin-debug/
 bin-release/
+out/
+*.iml
+.idea/
 
 # Other files and folders
 .settings/
