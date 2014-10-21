@@ -2,10 +2,11 @@
 <s:TabbedViewNavigatorApplication
         xmlns:fx="http://ns.adobe.com/mxml/2009"
         xmlns:s="library://ns.adobe.com/flex/spark" width="100%"
-        splashScreenImage="@Embed(source='../assets/splash_screen.jpg')">
+        splashScreenImage="@Embed(source='../assets/splash_screen.jpg')"
+        navigatorStateSaving="true">
 
     <s:ViewNavigator label="Catalog" firstView="views.HomeBaseView" width="100%" />
-    <s:ViewNavigator label="Search" firstView="views.search.Application" width="100%" />
+    <s:ViewNavigator label="Search" firstView="views.search.SearchBaseView" width="100%" />
     <s:ViewNavigator label="Basket" firstView="views.BasketBaseView" width="100%" />
     <s:ViewNavigator label="Account" firstView="views.AccountBaseView" width="100%" />
 

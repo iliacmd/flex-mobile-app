@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+  Created by abrashkin on 21.10.2014.
+-->
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+             alpha.disabled = "0.5" >
+
+    <fx:Metadata>
+        [HostComponent("spark.components.Button")]
+    </fx:Metadata>
+
+    <fx:Style>
+        #label{
+            fontSize: "20px";
+        }
+    </fx:Style>
+
+    <s:states>
+        <s:State name="up"/>
+        <s:State name="over"/>
+        <s:State name="down"/>
+        <s:State name="disabled"/>
+    </s:states>
+
+    <s:BitmapImage id="image"
+        source.down         = "@Embed(source='../../assets/button/button_over.png')"
+        source.over         = "@Embed(source='../../assets/button/button_up.png')"
+        source.up           = "@Embed(source='../../assets/button/button_up.png')"
+        source.disabled     = "@Embed(source='../../assets/button/button_up.png')"
+        top="0" left="0" right="0" bottom="0" />
+
+    <s:Label id="label" text="{ this.hostComponent.label }" horizontalCenter="0" verticalCenter="0"
+        color.down="#ff0000"/>
+
+</s:SparkSkin>
