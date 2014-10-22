@@ -6,7 +6,24 @@
     <s:navigationContent>
         <s:Button label="back" click="navigator.pushView(HomeBaseView)" />
     </s:navigationContent>
+    <s:layout>
+        <s:VerticalLayout/>
+    </s:layout>
+
+    <s:Image id="image" width="50" height="50" source="@Embed(source='../../../assets/image_item.jpg')" />
+    <s:Label id="titleLabel" text="title"></s:Label>
+    <s:Label id="categoryLabel" text="category"></s:Label>
+    <s:Label id="priceLabel" text="0 RUB"></s:Label>
+    <s:Button label="Отложить" ></s:Button>
+    <s:Button label="В корзину" ></s:Button>
+    <s:Label id="descriptionLabel" height="50">
+        <s:text>
+            Многстрочный текст
+        </s:text>
+    </s:Label>
+
     <fx:Script><![CDATA[
         import views.HomeBaseView;
-        ]]></fx:Script>
+    ]]></fx:Script>
+
 </s:View>

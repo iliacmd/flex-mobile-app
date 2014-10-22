@@ -54,5 +54,8 @@
             </s:dataProvider>
         </s:TabBar>
     </s:titleContent>
-    <s:List id="list" percentWidth="100" percentHeight="100"  dataProvider="{items}" minHeight="800" change="handlerIndexChange()"></s:List>
+    <s:List id="list"
+            percentWidth="100" percentHeight="100"
+            dataProvider="{items}" itemRenderer="skins.HomeItemRenderer"
+            minHeight="800" change="handlerIndexChange()"></s:List>
 </s:View>
