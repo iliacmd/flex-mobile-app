@@ -18,28 +18,24 @@
     </fx:Style>
 
     <fx:Script><![CDATA[
+        import mx.managers.PopUpManager;
+
         import res.strings.StringConst;
-
         import spark.events.IndexChangeEvent;
-
         import views.search.DetailBaseView;
 
         [Bindable]
         private var items:ArrayCollection = new ArrayCollection();
+
+        private var preLoader : BusyIndicator;
 
         private function showDetail(item:Object):void {
             navigator.pushView(DetailBaseView, item);
         }
 
         private function init():void {
-
+            preLoader = new Preloader();
             this.loadProducts();
-
-        }
-
-        private function handlerCompleteLoadData(event:Event):void {
-            var data:Array = JSON.parse(event.target.data) as Array;
-            items = new ArrayCollection(data);
         }
 
         private function handlerIndexChange():void {
@@ -54,7 +50,17 @@
 
             var loader:URLLoader = new URLLoader(new URLRequest("data/products.json"));
             loader.addEventListener(Event.COMPLETE, handlerCompleteLoadData);
+            PopUpManager.addPopUp( preLoader, this );
+            PopUpManager.centerPopUp( preLoader );
+            list.visible = false;
 
+        }
+
+        private function handlerCompleteLoadData(event:Event):void {
+            var data:Array = JSON.parse(event.target.data) as Array;
+            items = new ArrayCollection(data);
+            PopUpManager.removePopUp( preLoader );
+            list.visible = true;
         }
 
         ]]></fx:Script>
@@ -73,9 +79,11 @@
             </s:dataProvider>
         </s:TabBar>
     </s:titleContent>
+    <s:BusyIndicator id="busyIndicator" horizontalCenter="0" verticalCenter="0" visible="false" />
     <s:List id="list"
+            visible="false"
             percentWidth="100" percentHeight="100"
             dataProvider="{items}" itemRenderer="skins.HomeItemRenderer"
             minHeight="800" change="handlerIndexChange()">
-            </s:List>
+    </s:List>
 </s:View>
