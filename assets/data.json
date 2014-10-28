@@ -1,1 +1,4 @@
-[ { "label" : "Item1", "value" : "1" },  { "label" : "Item1", "value" : "1" } ]
+[
+    { "title" : "Hobot 168, Gray metallic робот для чистки стекл", "price" : "13980", "category" : "Техника"  },
+    { "title" : "Item1", "value" : "1" }
+]
