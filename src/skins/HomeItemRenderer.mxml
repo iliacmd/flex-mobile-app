@@ -15,6 +15,7 @@
             <s:Label id="category" text="{data.category}" fontSize="15"  maxDisplayedLines="1" width="100%" ></s:Label>
             <s:Label id="price" text="{data.price}" fontSize="15" color="#ff0055"  maxDisplayedLines="1" width="100%" ></s:Label>
         </s:VGroup>
+        <s:Image id="icon" width="20" height="20" source="@Embed(source='../../assets/arrow.png')" horizontalCenter="0" verticalCenter="0" />
     </s:HGroup>
 
 </s:ItemRenderer>
