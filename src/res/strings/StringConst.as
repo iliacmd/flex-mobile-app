@@ -5,11 +5,14 @@ package res.strings {
 public class StringConst {
 
     public static const
-                        homeTab         : String = "OZON.RU",
-                        searchTab       : String = "Поиск",
-                        postponedTab    : String = "Отложено",
-                        basketTab       : String = "Корзина",
-                        accountTab      : String = "Кабинет";
+                        homeTab                 : String = "OZON.RU",
+                        searchTab               : String = "Поиск",
+                        postponedTab            : String = "Отложено",
+                        basketTab               : String = "Корзина",
+                        accountTab              : String = "Кабинет",
+                        catalogNew              : String = "Новые",
+                        catalogBest             : String = "Бестселлеры",
+                        catalogRecommended      : String = "Рекомендованное";
 
     public function StringConst() {
     }
