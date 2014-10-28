@@ -4,9 +4,37 @@
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
         xmlns:s="library://ns.adobe.com/flex/spark"
-        title="Search">
-    <s:Button label="go" click="navigator.pushView(DetailBaseView)" />
+        title="Поиск" creationComplete="init()">
     <fx:Script><![CDATA[
-        import views.search.*;
-        ]]></fx:Script>
+        import mx.collections.ArrayCollection;
+        import mx.managers.PopUpManager;
+
+        [Bindable]
+        private var items : ArrayCollection;
+
+        private function init():void {
+            loadCategory();
+        }
+
+        private function loadCategory():void{
+            var loader:URLLoader = new URLLoader(new URLRequest("data/category.json"));
+            loader.addEventListener(Event.COMPLETE, handlerCompleteLoadData);
+        }
+
+        private function handlerCompleteLoadData(event:Event):void {
+            var data:Array = JSON.parse(event.target.data) as Array;
+            items = new ArrayCollection(data);
+            //PopUpManager.removePopUp( preLoader );
+            list.visible = true;
+        }
+
+        ]]>
+    </fx:Script>
+    <s:layout>
+        <s:VerticalLayout/>
+    </s:layout>
+    <s:HGroup width="100%">
+        <s:TextInput id="searchTextInput" width="100%" prompt="Поиск" />
+    </s:HGroup>
+    <s:List id="list" width="100%" height="100%" minHeight="{this.height}" dataProvider="{items}" visible="false" labelField="title"></s:List>
 </s:View>

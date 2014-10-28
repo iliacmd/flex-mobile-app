@@ -3,6 +3,14 @@
   Created by abrashkin on 15.10.2014.
 -->
 <s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <fx:Style>
+        @namespace s "library://ns.adobe.com/flex/spark";
+        s| Button{
+            fontSize: 10;
+        }
+    </fx:Style>
+
     <s:navigationContent>
         <s:Button label="back" click="navigator.pushView(HomeBaseView)" />
     </s:navigationContent>
@@ -10,17 +18,25 @@
         <s:VerticalLayout/>
     </s:layout>
 
-    <s:Image id="image" width="50" height="50" source="@Embed(source='../../../assets/image_item.jpg')" />
-    <s:Label id="titleLabel" text="title"></s:Label>
-    <s:Label id="categoryLabel" text="category"></s:Label>
-    <s:Label id="priceLabel" text="0 RUB"></s:Label>
-    <s:Button label="Отложить" ></s:Button>
-    <s:Button label="В корзину" ></s:Button>
+    <s:HGroup width="100%">
+        <s:Image id="image" width="50" height="50" source="@Embed(source='../../../assets/image_item.jpg')" />
+        <s:VGroup>
+            <s:Label id="titleLabel" text="title"></s:Label>
+            <s:Label id="categoryLabel" text="category"></s:Label>
+            <s:Label id="priceLabel" text="0 RUB"></s:Label>
+            <s:HGroup>
+                <s:Button label="Отложить" fontSize="15" height="30"></s:Button>
+                <s:Button label="В корзину" fontSize="15"  height="30"></s:Button>
+            </s:HGroup>
+        </s:VGroup>
+    </s:HGroup>
+
     <s:Label id="descriptionLabel" height="50">
         <s:text>
             Многстрочный текст
         </s:text>
     </s:Label>
+
 
     <fx:Script><![CDATA[
         import views.HomeBaseView;
