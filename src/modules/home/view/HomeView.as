@@ -38,7 +38,7 @@ public class HomeView extends HomeBaseView {
         loadRecommended();
     }
 
-    private function list_changeHandler():void {
+    private function list_changeHandler( event:IndexChangeEvent ):void {
         showDetail(list.selectedItem);
     }
 
