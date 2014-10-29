@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+  Created by abrashkin on 15.10.2014.
+-->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        title="Basket">
+		<s:titleContent>
+			<s:TabBar id="filterBar" width="100%" height="30" fontSize="10" change="filterBar_changeHandler(event)">
+				<s:dataProvider>
+					<s:ArrayCollection>
+						<fx:Object label="В продаже"/>
+						<fx:Object label="Ожидаются"/>
+					</s:ArrayCollection>
+				</s:dataProvider>
+			</s:TabBar>		
+		</s:titleContent>
+
+    <fx:Script><![CDATA[
+        import spark.events.IndexChangeEvent;
+
+        private function filterBar_changeHandler(event:IndexChangeEvent):void {
+
+        }
+        ]]></fx:Script>
+
+</s:View>

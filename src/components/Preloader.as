@@ -1,7 +1,7 @@
 /**
  * Created by abrashkin on 28.10.2014.
  */
-package views {
+package components {
 import spark.components.BusyIndicator;
 
 public class Preloader extends BusyIndicator {

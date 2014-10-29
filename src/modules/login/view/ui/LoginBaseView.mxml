@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+  Created by abrashkin on 29.10.2014.
+-->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark">
+
+
+    <s:actionContent>
+        <s:Button label="Отменить" id="buttonCancel" />
+    </s:actionContent>
+
+    <s:layout>
+        <s:VerticalLayout paddingBottom="5"/>
+    </s:layout>
+
+    <s:titleContent>
+        <s:TabBar width="100%">
+            <s:dataProvider>
+                <s:ArrayCollection>
+                    <fx:Object label="Вход" />
+                    <fx:Object label="Регистрация" />
+                </s:ArrayCollection>
+            </s:dataProvider>
+        </s:TabBar>
+    </s:titleContent>
+    <s:Form>
+        <s:FormItem label="Логин:"></s:FormItem>
+        <s:FormItem label="Пароль:"></s:FormItem>
+    </s:Form>
+    <s:Label text="Нажмите кнопку войти" />
+    <s:Button label="Войти" id="buttonEnter"/>
+</s:View>

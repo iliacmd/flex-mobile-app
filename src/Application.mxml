@@ -21,11 +21,11 @@
 
     </fx:Style>
 
-    <s:ViewNavigator id="home"      label="{ StringConst.homeTab       }" firstView="views.HomeBaseView"           width="100%"    icon="@Embed(source='../assets/tabs/clock.png')" />
-    <s:ViewNavigator id="postponed" label="{ StringConst.postponedTab  }" firstView="views.PostponedBaseView"      width="100%"    icon="@Embed(source='../assets/tabs/clock.png')" />
-    <s:ViewNavigator id="search"    label="{ StringConst.searchTab     }" firstView="views.search.SearchBaseView"  width="100%"    icon="@Embed(source='../assets/tabs/magnifying_glass.png')" />
-    <s:ViewNavigator id="basket"    label="{ StringConst.basketTab     }" firstView="views.BasketBaseView"         width="100%"    icon="@Embed(source='../assets/tabs/trolley.png')" />
-    <s:ViewNavigator id="account"   label="{ StringConst.accountTab    }" firstView="views.AccountBaseView"        width="100%"    icon="@Embed(source='../assets/tabs/pacman.png')" />
+    <s:ViewNavigator id="home"      label="{ StringConst.homeTab       }" firstView="modules.home.view.HomeView"             width="100%"    icon="@Embed(source='../assets/tabs/clock.png')" />
+    <s:ViewNavigator id="postponed" label="{ StringConst.postponedTab  }" firstView="modules.postponed.view.PostponedView"   width="100%"    icon="@Embed(source='../assets/tabs/clock.png')" />
+    <s:ViewNavigator id="search"    label="{ StringConst.searchTab     }" firstView="modules.search.view.SearchView"         width="100%"    icon="@Embed(source='../assets/tabs/magnifying_glass.png')" />
+    <s:ViewNavigator id="basket"    label="{ StringConst.basketTab     }" firstView="modules.basket.view.BasketView"         width="100%"    icon="@Embed(source='../assets/tabs/trolley.png')" />
+    <s:ViewNavigator id="account"   label="{ StringConst.accountTab    }" firstView="modules.account.view.AccountView"       width="100%"    icon="@Embed(source='../assets/tabs/pacman.png')" />
 
     <fx:Script><![CDATA[
         import res.strings.StringConst;

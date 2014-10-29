@@ -7,16 +7,15 @@
         title="Поиск" creationComplete="init()">
     <fx:Script><![CDATA[
         import mx.collections.ArrayCollection;
-        import mx.managers.PopUpManager;
 
         [Bindable]
-        private var items : ArrayCollection;
+        private var items:ArrayCollection;
 
         private function init():void {
             loadCategory();
         }
 
-        private function loadCategory():void{
+        private function loadCategory():void {
             var loader:URLLoader = new URLLoader(new URLRequest("data/category.json"));
             loader.addEventListener(Event.COMPLETE, handlerCompleteLoadData);
         }
@@ -27,7 +26,6 @@
             //PopUpManager.removePopUp( preLoader );
             list.visible = true;
         }
-
         ]]>
     </fx:Script>
     <s:layout>

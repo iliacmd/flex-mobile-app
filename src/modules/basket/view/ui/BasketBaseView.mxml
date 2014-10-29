@@ -6,6 +6,7 @@
         xmlns:s="library://ns.adobe.com/flex/spark"
         title="Basket">
     <s:titleContent>
+
         <s:TabBar id="filterBar" width="100%" height="30" fontSize="10">
             <s:dataProvider>
                 <s:ArrayCollection>
@@ -14,5 +15,6 @@
                 </s:ArrayCollection>
             </s:dataProvider>
         </s:TabBar>
+
     </s:titleContent>
 </s:View>
